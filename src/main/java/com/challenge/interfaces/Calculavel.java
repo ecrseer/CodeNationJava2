@@ -4,9 +4,9 @@ import java.math.BigDecimal;
 
 public interface Calculavel {
 
-    public BigDecimal Somar();
+    public BigDecimal Somar(Class qual);
 
-    public BigDecimal Subtrair();
+    public BigDecimal Subtrair(Class qual);
 
-    public BigDecimal Totalizar();
+    public BigDecimal Totalizar(Class qual);
 }
