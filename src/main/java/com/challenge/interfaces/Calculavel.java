@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 
 public interface Calculavel {
 
-    public BigDecimal Somar(Class qual);
+    public BigDecimal Somar(Object qual);
 
     public BigDecimal Subtrair(Class qual);
 

@@ -1,5 +1,6 @@
 package com.challenge.desafio;
 
+import com.challenge.annotation.Somar;
 import com.challenge.interfaces.Calculavel;
 
 import java.lang.reflect.InvocationTargetException;
@@ -11,27 +12,29 @@ public class CalculadorDeClasses implements Calculavel {
 
 
     @Override
-    public BigDecimal Somar(Class qual) {
+    public BigDecimal Somar(Object qual) {
 
 
-        Method[] eles = getClass().getDeclaredMethods();
+        Method[] eles = qual.getClass().getDeclaredMethods();
         BigDecimal soma = BigDecimal.ZERO;
 
 
-        for(Method umdeles: eles){
 
-            if(umdeles.getName()
-                    .toLowerCase()
-                    .contains("get")){
-                try {
-                    BigDecimal somar = (BigDecimal) umdeles.invoke(qual) ;
+        for(Method umdeles: eles)
+        {
+            if (umdeles.isAnnotationPresent(Somar.class))
+            {
+                System.out.println("Somar é ");
+
+                try
+                {
+                    BigDecimal somar = (BigDecimal) umdeles.invoke(qual);
                     soma = somar.add(soma);
 
                 }catch (IllegalAccessException | InvocationTargetException e){
-                    e.printStackTrace();
-                }
-                                         }
-                                  }
+                    e.printStackTrace();    }
+            }
+        }
         return soma;
     }
 
