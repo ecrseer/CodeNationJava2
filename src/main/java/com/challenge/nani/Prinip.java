@@ -17,10 +17,14 @@ public class Prinip {
 
         CalculadorDeClasses calus = new CalculadorDeClasses();
         Object farofa = new Tempero("Leve",
-                BigDecimal.valueOf(420),BigDecimal.valueOf(12));
+                BigDecimal.valueOf(420),
+                BigDecimal.valueOf(12)
+        );
 
         BigDecimal oiz = new BigDecimal(4);
-        //oiz =oiz.add(calus.Somar(farofa.getClass()));
+        oiz =oiz.add(calus.Somar(farofa));
+        System.out.println("ave "+oiz);
+        /*
         float fuu = Float.parseFloat(String.valueOf(oiz));
         fuu = fuu+1;
         oiz = BigDecimal.valueOf(fuu);
@@ -31,7 +35,7 @@ public class Prinip {
        // Class<?> clazz = Class.forName("com.challenge.nani.Tempero");
         //Object hei = new inhai();
         //inhai = inhai.getClass().getSubclass();
-        System.out.println("ave "+inhai);
+        System.out.println("ave "+inhai);*/
 
 
 

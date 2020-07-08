@@ -10,7 +10,7 @@ public class Tempero {
     private BigDecimal qtd;
     @Somar
     public BigDecimal teta=BigDecimal.valueOf(32);
-    @Somar
+
     public float mega=42;
 
     public Tempero (String odr,BigDecimal gr,BigDecimal qt){
@@ -44,5 +44,11 @@ public class Tempero {
 
     public void setQtd(BigDecimal qtd) {
         this.qtd = qtd;
+    }
+
+    @Override
+    public String toString(){
+
+        return "A "+getOdor();
     }
 }
