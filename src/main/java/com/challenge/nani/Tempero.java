@@ -2,12 +2,18 @@ package com.challenge.nani;
 
 import com.challenge.annotation.Somar;
 
+import java.math.BigDecimal;
+
 public class Tempero {
     private String odor;
-    private int gramas;
-    private int qtd;
+    private BigDecimal gramas;
+    private BigDecimal qtd;
+    @Somar
+    public BigDecimal teta=BigDecimal.valueOf(32);
+    @Somar
+    public float mega=42;
 
-    public Tempero (String odr,int gr,int qt){
+    public Tempero (String odr,BigDecimal gr,BigDecimal qt){
         this.odor=odr;
         this.gramas=gr;
         this.qtd=qt;
@@ -22,20 +28,21 @@ public class Tempero {
         this.odor = odor;
     }
 
-    @Somar public int getGramas() {
+
+    public BigDecimal getGramas() {
         return gramas;
     }
 
-    public void setGramas(int gramas) {
+    public void setGramas(BigDecimal gramas) {
         this.gramas = gramas;
     }
 
-    @Somar
-    public int getQtd() {
+
+    public BigDecimal getQtd() {
         return qtd;
     }
 
-    public void setQtd(int qtd) {
+    public void setQtd(BigDecimal qtd) {
         this.qtd = qtd;
     }
 }
