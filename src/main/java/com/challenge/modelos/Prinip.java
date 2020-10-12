@@ -18,19 +18,6 @@ public class Prinip {
         System.out.println("Peso total é "+pesoTotal);
 
 
-        /*
-        float fuu = Float.parseFloat(String.valueOf(oiz));
-        fuu = fuu+1;
-        oiz = BigDecimal.valueOf(fuu);
-        //System.out.println("BigD "+calus.MrsBoilerplate(farofa,'+'));
-        Class mentos = farofa.getClass();
-        String inhai = mentos.getTypeName();
-        //Dinossauro.class.
-       // Class<?> clazz = Class.forName("com.challenge.nani.Tempero");
-        //Object hei = new inhai();
-        //inhai = inhai.getClass().getSubclass();
-        System.out.println("ave "+inhai);*/
-
 
 
     }
