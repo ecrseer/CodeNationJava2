@@ -52,7 +52,8 @@ public class CalculadorDeClasses implements Calculavel {
 
 
     private BigDecimal RecaudadorDelApuntamiento(Object qual,Field umdeles,
-                                                 Class <? extends Annotation> apuntamiento){
+                                                  Class <? extends Annotation>
+                                                          apuntamiento){
         BigDecimal somar = BigDecimal.ZERO;
         if (umdeles.isAnnotationPresent(apuntamiento))
         {
