@@ -39,6 +39,7 @@ public class CalculadorDeClasses implements Calculavel {
         {
             soma=soma.add(RecaudadorDelApuntamiento(qual,umdeles,Somar.class));
             subtra=subtra.add(RecaudadorDelApuntamiento(qual,umdeles,Subtrair.class));
+
         }
 
         switch(opl){
@@ -50,7 +51,8 @@ public class CalculadorDeClasses implements Calculavel {
     }
 
 
-    private BigDecimal RecaudadorDelApuntamiento(Object qual,Field umdeles, Class <? extends Annotation> apuntamiento){
+    private BigDecimal RecaudadorDelApuntamiento(Object qual,Field umdeles,
+                                                 Class <? extends Annotation> apuntamiento){
         BigDecimal somar = BigDecimal.ZERO;
         if (umdeles.isAnnotationPresent(apuntamiento))
         {

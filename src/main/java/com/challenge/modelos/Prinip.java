@@ -1,29 +1,23 @@
-package com.challenge.nani;
+package com.challenge.modelos;
 
 import com.challenge.desafio.CalculadorDeClasses;
 
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Type;
 import java.math.BigDecimal;
 
 public class Prinip {
 
-     static class Dinossauro{
-        public int oil=0;
-
-    }
 
     public static void main(String[] args){
 
-        CalculadorDeClasses calus = new CalculadorDeClasses();
-        Object farofa = new Tempero("Leve",
-                BigDecimal.valueOf(420),
-                BigDecimal.valueOf(12)
-        );
+        CalculadorDeClasses calcs = new CalculadorDeClasses();
 
-        BigDecimal oiz = new BigDecimal(4);
-        oiz =oiz.add(calus.Somar(farofa));
-        System.out.println("ave "+oiz);
+        Object caix = new Caixa();
+
+        BigDecimal pesoTotal = new BigDecimal(0);
+        pesoTotal =pesoTotal.add(calcs.Somar(caix));
+        System.out.println("Peso total é "+pesoTotal);
+
+
         /*
         float fuu = Float.parseFloat(String.valueOf(oiz));
         fuu = fuu+1;
